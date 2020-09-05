@@ -1,0 +1,123 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % TODO : ce renseigner sur l'encodage
+\usepackage[french]{babel}
+\usepackage[left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm]{geometry} %pour les marges
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath} %gather
+\usepackage{graphicx}
+% fancy
+\usepackage{lastpage}
+\usepackage{fancybox,ctable} % pour table avec lignes et colonnes
+\usepackage{fancyhdr}
+% end fancy
+\usepackage{titlesec} % hauteur des chapitres titlespacing ne marche pas ?
+
+%pdf cliquable
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, % lien colore si == true
+    linktoc=all,     % les sections et sous section sont cliquables
+    linkcolor=black, % les liens sont de couleur noir
+}
+
+\titleformat{\chapter}[hang]{\bf\huge}{\thechapter}{2pc}{} % voir si je change la taille des chapitres a nouveau
+
+% code, coloration par default
+\lstset{
+	%frame=tb, %bordure haute et basse
+	tabsize=4,
+	%numbers=left,
+	breaklines=true,
+	commentstyle=\color{green},
+	keywordstyle=\color{purple},
+	stringstyle=\color{blue},
+	caption=\lstname,
+	basicstyle=\small
+}
+
+\titlespacing{\chapter}{0cm}{0cm}{0.3cm}
+
+\makeatletter
+\let\ps@plain=\ps@fancy % sert à remplacer le plain en fancy
+\makeatother
+
+\title{\textbf{Rapport NUMEROTP NOMMATIERE\\
+INTITULEMATIERE}}
+\author{
+	NOMAUTEURDOC, PRENOMAUTEURDOC\\
+	{\small {ADRESSEEMAILDOC}}
+}
+\date{\today}
+
+%%%%% haut de page + pied de page %%%%
+\renewcommand{\headrulewidth}{1pt}
+\pagestyle{fancy}
+\fancyhead[L]{NOMMATIERE-Rapport-NUMEROTP}
+\fancyhead[R]{\includegraphics[width=1cm]{images/urca.jpg}}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[C]{} 
+\fancyfoot[R]{page \thepage/\pageref{LastPage}}
+%%% fin haut de page + pied de page %%%
+
+\begin{document}
+	
+	\begin{titlepage}
+
+	\centering
+	
+	\scshape
+	
+	\vspace*{\baselineskip}
+
+	\rule{\textwidth}{2pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.5pt}
+	
+	\vspace{0.75\baselineskip}
+	
+	{\LARGE Rapport NOMMATIERE\\ INTITULEMATIERE\\}
+	
+	\vspace{0.75\baselineskip}
+	
+	\rule{\textwidth}{0.5pt}\vspace*{-\baselineskip}\vspace{3pt} 
+	\rule{\textwidth}{2pt} 
+	
+	\vspace{1.5\baselineskip} 
+	
+	Rapport récapitulatif du tp courant d'info0605
+	
+	\vspace*{3\baselineskip}
+	
+	Créé par :
+	
+	\vspace{0.5\baselineskip}
+	{\scshape\Large PRENOMAUTEURDOC NOMAUTEURDOC}
+	
+	\vspace{0.5\baselineskip}
+	
+	\textit{Ufr Sciences Exactes Et Naturelles \\ URCA }
+	
+	\vfill
+	
+	\includegraphics[width=10cm]{images/urca.jpg}
+	
+	\vspace{0.5\baselineskip}
+	
+	\textbf{{\large \the\year}}
+
+	\end{titlepage}
+	
+	\maketitle
+	\selectlanguage{french}		
+	
+	%ne pas oublier : generation automatique en 2 passes (flemme)
+	\tableofcontents
+
+	\chapter{chapitre de test}
+		
+	
+\end{document}
