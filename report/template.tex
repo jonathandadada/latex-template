@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc} % TODO : ce renseigner sur l'encodage
 \usepackage[french]{babel}
 \usepackage[left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm]{geometry} %pour les marges
-\usepackage{listings}
+\usepackage{listings} %lstinputlisting
 \usepackage{xcolor}
 \usepackage{amsmath} %gather
 \usepackage{graphicx}
@@ -118,6 +118,36 @@ INTITULEMATIERE}}
 	\tableofcontents
 
 	\chapter{chapitre de test}
+
+	test
+	
+	\chapter{démo code inclus en C}
+
+	\section{la section ci dessous est un exemple}
+	
+	Je montre seulement les inclusions, vous pouvez appliquer le même principe pour chaque langage de programmation.
+
+	\section{inclusion du code de la cellule}	
+	
+	\subsection{headers d'une cellule}
+	\lstinputlisting[language=c]{codes/liste_chainee/cellule.h}	
+
+	\newpage	
+	
+	\subsection{code d'une cellule}
+	\lstinputlisting[language=c]{codes/liste_chainee/cellule.c}	
+		
+	\newpage		
+	
+	\section{inclusion du code du graphe}
+	
+	\subsection{headers d'un graphe}
+	\lstinputlisting[language=c]{codes/graphe/graphe.h}
+	
+	\newpage	
+	
+	\subsection{code d'un graphe}
+	\lstinputlisting[language=c]{codes/graphe/graphe.c}	
 		
 	
 \end{document}
