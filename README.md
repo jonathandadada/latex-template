@@ -18,7 +18,7 @@ python3 generate.py
 ensuite, le fichier template.tex est modifie avec vos macros.  
 en cas d'erreur sur les macros, veuillez copier puis renommer la copie de template.tex.bak en template.tex (c'est une backup)  
 
-## ajout de code (dans un fichier) et coloration automatique dans latex
+## ajout de code (dans un fichier) et coloration automatique dans latex
 
 \lstinputlisting[]{} -- Voir https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings pour tout ce qui coloration (choisir la couleur que vous voulez pour les differents éléments du code)
 
